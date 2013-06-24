@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contatos - Agenda de contatos</title>
+</head>
+<body>
+
+	<header>
+		<h2>Formulário de Contatos</h2>
+	</header>
+	
+	<section>
+	
+		<form action="/contatos/<%- contato.id %>" method="post">
+			<label>Nome:</label> <input type="text" name="contato[nome]" value="<%- contato.nome %>">
+			<br>
+			<label>E-mail:</label> <input type="text" name="contato[email]" value="<%- contato.email %>">
+			<br>
+			<button type="submit">Salvar</button>
+		</form>
+		
+	</section>
+	
+	<br>
+
+	<footer>
+		<small>Contatos - Agenda de contatos</small>
+	</footer>
+	
+</body>
+</html>

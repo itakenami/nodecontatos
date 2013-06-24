@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contatos - Agenda de contatos</title>
+</head>
+<body>
+
+	<header>
+		<h2>Agenda de contatos</h2>
+	</header>
+
+	<section>
+	
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>E-mail</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% contatos.forEach(function(contato) { %>
+				<tr>
+					<td><a href="/contatos/<%- contato.id %>"><%- contato.nome %></a></td>
+					<td><%- contato.email %></td>
+					<td>
+						<a href="/contatos/<%- contato.id %>/edit">Editar</a>
+						&nbsp;|&nbsp;
+						<a href="/contatos/<%- contato.id %>/delete">Excluir</a></td>
+				</tr>
+				<% }) %>
+			</tbody>
+		</table>
+		
+		<br>
+		
+		<a href="contatos/add">Novo</a>
+		
+		<br>
+		<br>
+		
+	</section>
+	
+	<footer>
+		<small>Contatos - Agenda de contatos</small>
+	</footer>
+	
+</body>
+</html>
